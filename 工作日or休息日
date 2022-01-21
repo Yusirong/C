@@ -1,0 +1,26 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+int main()
+{
+	int day = 0;
+	scanf("%d", &day);
+	switch (day)
+	{
+		case1:
+		case2:
+		case3:
+		case4:
+		case5:
+		   printf("工作日/n");
+		   break;
+		case6:
+		case7:
+			printf("休息日/n");
+			break;
+	    default:
+		    printf("输入错误/n");
+		break;
+	}
+	return  0;
+
+}
