@@ -1,9 +1,10 @@
+#define_CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 
 int main()
 {
 int day = 0;
-scanf(%d",&day);
+scanf("%d",&day);
 switch(day)
 {
 case1:
