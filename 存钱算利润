@@ -1,0 +1,21 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main()
+{
+	int base = 1000;
+	float r1 = 0.0036;//活期
+	float r2 = 0.0225;//定期
+	float r3 = 0.0198;//半年
+
+	float base1 = base*(1 + r1);
+	float base2 = base*(1 + r2);
+	float base3 = base*(1 + r3)*(1 + r3);//注意这里相乘两项前都要加乘号
+
+	printf("base1=%f\n", base1);
+	printf("base2=%f\n", base2);
+	printf("base3=%f\n", base3);
+
+	return 0;
+}
+
