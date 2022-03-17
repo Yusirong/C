@@ -1,12 +1,26 @@
-  #include<stdio.h>
-  #include<math.h>
-  
-  int mian()
- {
-  float a,b,c;
+#include<stdio.h>
+#include<math.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main()
+{
+	float a,b,c;
 	scanf("%f%f%f", &a, &b, &c);
-	float x1 = ( - b + sqrt(b * b - 4 * a * c)) / (2 * a);
-	float x2 = (-b - sqrt(b * b - 4 * a * c)) / (2 * a);
-	printf("x1=%f\nx2=%f", x1, x2);
-  return 0;
-  }
+	float disc = b * b - 4 * a * c;
+	if(disc>0)
+	{
+		float x1 = (-b + sqrt(disc)) / (2 * a);
+		float x2 = (-b - sqrt(disc)) / (2 * a);
+		printf("方程有两个解\nx1=%f\nx2=%f", x1, x2);
+	}
+	else if(disc==0)
+	{
+		float x = (-b + sqrt(disc)) / (2 * a);
+		printf("方程有两个相同的根\nx=%f\n", x);
+	}
+	else
+	{
+		printf("无解");
+	}
+	return 0;
+}
