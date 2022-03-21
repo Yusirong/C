@@ -1,0 +1,17 @@
+#include<stdio.h>
+
+int main()
+{
+int sign = 1;
+	double sum = 1;
+	int deno;
+	double term;
+	for(deno=2;deno<=100;deno++)
+	{
+		sign = -1 * sign;
+		term = sign * (1.0 / deno);
+		sum = sum + term;
+	}
+	printf("%f", sum);
+	return 0;
+}
