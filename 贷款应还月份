@@ -1,0 +1,10 @@
+int main()
+{
+	int d = 300000;
+	int p = 6000;
+	double r = 0.01;
+	double m = (log(p) - log(p - d * r)) / log(1 + r);
+	printf("%5.2f\n", m);
+	printf("This homework is finished by 余思榕");
+	return 0; 
+}
