@@ -1,0 +1,12 @@
+ int main()
+{
+  int j = 10;
+	int i = 3;
+
+	float x = (float)j / (float)i;
+	printf("x = %f\n", x);
+
+	float y = j / i;
+	printf("y = %f\n", y);
+	return;
+}
