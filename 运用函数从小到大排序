@@ -1,0 +1,13 @@
+#define CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<math.h>
+int mian()
+{
+  int a, b, c;
+	scanf("%d%d%d", &a, &b, &c);
+	int min_value = fminf(fminf(a, b), c);
+	int max_value = fmaxf(fmaxf(a, b), c);
+	int mid_value = a + b + c - min_value - max_value;
+	printf("%d,%d,%d", min_value, mid_value, max_value);
+	return;
+}
