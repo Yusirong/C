@@ -1,0 +1,46 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<math.h>
+
+//int main()
+//{
+//	int a, b,max;
+//	scanf("%d%d", &a, &b);
+//	max = (a > b) ? a : b;
+//	printf("max=%d", max);
+//	return 0;
+//}
+int main()
+{
+	int a, b, c, d,n,m;
+	scanf("%d%d%d%d", &a, &b, &c, &d);
+	if ((a < b) && (c > d))
+	{
+		printf("success\n");
+	}
+	else
+	{
+		printf("fail\n");
+	}
+	/*
+	m = (a > b);
+    n = (c < d);
+	if (m && n)
+	{
+		printf("success\n");
+	}
+	else
+	{
+		printf("fail\n");
+	}
+  */
+	if ((m = (a < b)) && (n = (c > d)))
+	{
+		printf("success");
+	}
+	else
+	{
+		printf("fail");
+	}
+	return 0;
+}
