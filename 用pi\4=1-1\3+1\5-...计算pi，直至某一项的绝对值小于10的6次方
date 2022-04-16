@@ -1,0 +1,20 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+float sign = 1.0;
+float deno = 3.0;
+float sum = 1.0;
+for (;;)
+{
+	sign = (-1) * sign;
+	sum += sign / deno;
+	deno += 2;
+	if (fabsf(1/deno)< 0.000001)
+		break;
+}
+printf("pi=%f", 4 * sum);
+	return;
+}
