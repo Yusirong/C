@@ -1,17 +1,53 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+1.for循环形式
+int main()
+{
+        int sign = 1;
+	double sum = 1;
+	for(double deno=2;deno<=100;deno++)
+	{
+		sign = (-1) * sign;
+		sum += sign/deno;
+	}
+	printf("%f", sum);
+	return 0;
+}
+
+2.do while形式
+#define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
 
 int main()
 {
-int sign = 1;
+	double sign = 1.0;
+	double deno = 2.0;
+	double sum = 1.0;
+	do {
+		sign = sign * (-1);
+		sum += (sign)/deno;
+		deno++;
+	} while (deno<=100);
+	printf("sum=%f", sum);
+return;
+}
+
+3.while型
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int mian()
+{
+    int sign = 1;
 	double sum = 1;
-	int deno;
-	double term;
-	for(deno=2;deno<=100;deno++)
+	double deno = 2.0;
+	while (deno <= 100)
 	{
-		sign = -1 * sign;
-		term = sign * (1.0 / deno);
-		sum = sum + term;
+		sign = (-1) * sign;
+		sum += sign / deno;
+		deno++;
 	}
-	printf("%f", sum);
-	return 0;
+	printf("sum=%f",sum);
+return;
 }
