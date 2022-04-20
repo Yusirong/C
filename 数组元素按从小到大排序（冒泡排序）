@@ -1,0 +1,28 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	int i,j,a[10];
+	for (i = 0; i < 10; i++)
+	{
+		a[i] = rand()%100+1;
+	}
+	for (j = 0; j < 9; j++)
+	{
+		for (i = 0; i < 9-j; i++)
+		{
+			if (a[i + 1] < a[i])
+			{
+				int tmp = a[i];
+				a[i] = a[i + 1];
+				a[i + 1] = tmp;
+			}
+		}
+	}
+	for (i = 0; i < 10; i++)
+	{
+		printf("%d\t", a[i]);
+	}
+	return 0;
+}
