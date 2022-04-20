@@ -1,0 +1,19 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main()
+{
+	int i;
+	int a[20] = { 1,1 };
+	printf("%d\t%d\t", a[0], a[1]);
+	for (i = 2; i < 20; i++)
+	{
+		a[i] = a[i - 1] + a[i - 2];
+		if ((i % 5) == 0)
+		{
+			printf("\n");
+		}
+		printf("%d\t", a[i]);
+	}
+	return 0;
+}
