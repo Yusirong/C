@@ -1,0 +1,40 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main()
+{
+	float d;
+	printf("please enter distance:\n");
+	scanf("%f", &d);
+	if (d < 250)
+	{
+		printf("this has no discounts\n");
+		printf("the price is %f", d * 10);
+	}
+	else if (250 <= d < 500)
+	{
+		printf("this has 98 discounts\n");
+		printf("the price is %f", d * 10* 0.98);
+	}
+	else if (500 <= d < 1000)
+	{
+		printf("this has 95 discounts\n");
+		printf("the price is %f", d * 10 * 0.95);
+	}
+	else if (1000 <= d < 2000)
+	{
+		printf("this has 92 discounts\n");
+		printf("the price is %f", d * 10 * 0.92);
+	}
+	else if (2000 <= d < 3000)
+	{
+		printf("this has 9 discounts\n");
+		printf("the price is %f", d * 10 * 0.9);
+	}
+	else if (d>=3000)
+	{
+		printf("this has 85 discounts\n");
+		printf("the price is %f", d * 10 * 0.85);
+	}
+	return 0;
+}
