@@ -1,6 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include<stdio.h>
-
+\\第一种
 int main()
 {
 	float d;
@@ -36,5 +36,41 @@ int main()
 		printf("this has 85 discounts\n");
 		printf("the price is %f", d * 10 * 0.85);
 	}
+	return 0;
+}
+
+\\第二种
+int main()
+{
+	int c = 0, d = 0;
+	float p = 0, f = 0, discount = 0;
+	printf("please enter distance:\n");
+	scanf("%d", &d);
+	if (d >= 3000)
+	{
+		c = 12;
+	}
+	else
+	{
+		c = d / 250;
+	}
+	switch (c)
+	{
+	case 0:discount = 0; break;
+	case 1:discount = 0.02; break;
+	case 2:
+	case 3:discount = 0.05; break;
+	case 4:
+	case 5:
+	case 6:
+	case 7:
+	case 8:discount = 0.08; break;	
+	case 9:
+	case 10:
+	case 11:discount = 0.1; break;
+	case 12:discount = 0.15; break;
+	}
+	f = d * 10 * (1 - discount);
+	printf("price is %f\n", f);
 	return 0;
 }
