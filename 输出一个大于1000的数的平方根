@@ -1,0 +1,20 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+	int a,b;
+	for (;;)
+	{
+		printf("please enter a number:\n");
+	scanf("%d", &a);
+	if (a >= 1000)
+	{
+		b = sqrt(a);
+		printf("sqrt=%d\n", b);
+		break;
+	}
+	}
+	return 0;
+}
