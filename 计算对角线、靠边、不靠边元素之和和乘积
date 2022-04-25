@@ -1,0 +1,44 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+	int m[4][4],i,j,sum1,sum2,sum3=0,sum4=0,pro1,pro2,pro3=1,pro4=1;
+	printf("this homework is finished by 余思榕\n");
+	for (i = 0; i < 4; i++)
+	{
+		for (j = 0; j < 4; j++)
+		{
+			m[i][j] = rand() % 100;
+			printf("%4d", m[i][j]);
+		}
+		printf("\n");
+	}
+	sum1 = m[3][0] + m[2][1] + m[1][2] + m[0][3];
+	sum2 = m[0][0] + m[1][1] + m[2][2] + m[3][3];
+	pro1 = m[3][0] * m[2][1] * m[1][2] * m[0][3];
+	pro2 = m[0][0] * m[1][1] * m[2][2] * m[3][3];
+	printf("对角线之和分别为%d和%d，乘积分别为%d和%d\n", sum1,sum2,pro1,pro2);
+	for (j = 0; j < 4; j++)
+	{
+		sum3 += m[0][j]+ m[3][j];
+		pro3 = pro3 * m[0][j] * m[3][j];
+	}
+	for (i = 1; i < 3; i++)
+	{
+		sum3 += m[i][0] + m[i][3];
+		pro3=pro3* m[i][0] * m[i][3];
+	} 
+	printf("所有靠边元素之和为%d，乘积为%d\n", sum3,pro3);
+	for (i = 1; i < 3; i++)
+	{
+		for (j = 1; j < 3; j++)
+		{
+			sum4 += m[i][j];
+			pro4 = pro4 * m[i][j];
+		}
+	}
+	printf("所有不靠边的元素之和为%d，乘积为%d\n",sum4,pro4);
+	return 0;
+}
