@@ -1,0 +1,71 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+	char str[30] = "A123x456 17960? 302tab5876";
+	char* p;
+	int i = 0, j = 0, k = 0, n = 0, * pa, a[10], digit, e, m;
+	pa = &a[0];
+	p = &str[0];
+	while (*(p + i) != '\0')
+	{
+		if ((*(p + i) >= '0') && (*(p + i) <= '9'))
+		{
+			j++;
+		}
+		else
+		{
+			if (j > 0)
+			{
+				digit = *(p + i - 1) - 48;
+				k = 1;
+				while (k < j)
+				{
+					e = 1;
+					for (m = 1; m <= k; m++)
+					{
+						e = e * 10;
+					}
+					digit = digit + (*(p + i - 1 - k) - 48) * e;
+					k++;
+				}
+				*pa = digit;
+				n++;
+				pa++;
+				j = 0;
+			}
+		}
+		i++;
+	}
+	if (j > 0)
+	{
+		digit = *(p + i - 1) - 48;
+		k = 1;
+		while (k < j)
+		{
+			e = 1;
+			for (m = 1; m <= k; m++)
+			{
+				e = e * 10;
+			}
+			digit = digit + (*(p + i - 1 - k) - 48) * e;
+			k++;
+		}
+		*pa = digit;
+		n++;
+		j = 0;
+	}
+	printf("this homework is finished by 余思榕\n");
+	printf("str:%s\n", str);
+	printf("there are %d numbers,ther are:\n", n);
+	j = 0;
+	pa = &a[0];
+	for (j = 0; j < n; j++)
+	{
+		printf(" %d ", *(pa + j));
+	}
+	printf("\n");
+	return 0;
+}	 
