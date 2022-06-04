@@ -1,0 +1,26 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+#include<string.h>
+#include<assert.h>
+
+void my_strcat(char* p1, char* p2)
+{
+	while (*p1 != '\0')
+	{
+		p1++;
+	}
+	while (*p2 != '\0')
+	{
+		*p1 = *p2;
+		p1++;
+		p2++;
+	}
+}
+int main()
+{
+	char arr1[] = "abcdef";
+	char arr2[30] = "bit";
+	my_strcat(arr2, arr1);
+	printf("arr2=%s\n", arr2);
+	return 0;
+}
