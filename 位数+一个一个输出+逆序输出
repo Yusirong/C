@@ -29,5 +29,49 @@ int main()
 		printf("正序：%d\n", a);
 		printf("逆序：%d\n", a);
 	}
+		return 0;
+}
+	
+	
+	/*用switch case语句
+	int main()
+{
+	int a,p;
+	scanf("%d", &a);
+	if (a >= 100 && a <= 999)
+	{
+		p = 3;
+		printf("位数:%d\n",p);
+		
+	}
+	else if (a >= 10 && a < 100)
+	{
+		p = 2;
+		printf("位数:%d\n",p);
+		
+	}
+	else if (a >= 0 && a < 10)
+	{
+		p = 1;
+		printf("位数:%d\n",p);
+
+	}
+	switch (p)
+	{
+	case 3:printf("正序：%d ", a / 100);
+		printf("%d ", a % 100 / 10);
+		printf("%d\n", a % 100 % 10);
+		printf("逆序：%d ", a % 100 % 10);
+		printf("%d ", a % 100 / 10);
+		printf("%d\n", a / 100); break;
+	case 2:printf("正序：%d ", a / 10);
+		printf("%d\n", a % 10);
+		printf("逆序：%d ", a % 10);
+		printf("%d\n", a / 10); break;
+	case 1:	printf("正序：%d\n", a);
+		printf("逆序：%d\n", a); break;
+	}
 	return 0;
 }
+*/
+
