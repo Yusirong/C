@@ -1,0 +1,33 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main()
+{
+	int a;
+	scanf("%d", &a);
+	if (a >= 100 && a <= 999)
+	{
+		printf("位数:3\n");
+		printf("正序：%d ", a / 100);
+		printf("%d ", a %100/10);
+		printf("%d\n", a %100%10);
+		printf("逆序：%d ", a % 100 % 10);
+		printf("%d ", a % 100 / 10);
+		printf("%d\n", a / 100);
+	}
+	else if (a >= 10 && a < 100)
+	{
+		printf("位数:2\n");
+		printf("正序：%d ", a / 10);
+		printf("%d\n", a % 10);
+		printf("逆序：%d ", a % 10);
+		printf("%d\n", a / 10);
+	}
+	else if (a >= 0 && a < 10)
+	{
+		printf("位数:1\n");
+		printf("正序：%d\n", a);
+		printf("逆序：%d\n", a);
+	}
+	return 0;
+}
