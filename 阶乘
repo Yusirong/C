@@ -1,0 +1,15 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main()
+{
+	int n = 1;
+	double r = 1, s = 0;
+	for (; n <= 20; n++)
+	{
+		r *= n;
+		s += r;
+	}
+	printf("s=%22.15e\n", s);
+	return 0;
+}
