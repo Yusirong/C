@@ -1,0 +1,23 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+int main()
+{
+	struct day
+	{
+		int year;
+		int month;
+		int date;
+	}a;
+	scanf("%d.%d.%d", &a.year, &a.month, &a.date);
+	int day_tab[13] = { 0,31,28,31,30,31,30,31,31,30,31,30,31 };
+	int days=0;
+	for (int i = 0; i < a.month; i++)
+	{
+		days += day_tab[i];
+	}
+	days += a.date;
+	if ((a.year % 4 == 0) && (a.year % 100 != 0) || (a.year % 400 == 0))
+		days++;
+	printf("is at %dth", days);
+ }
